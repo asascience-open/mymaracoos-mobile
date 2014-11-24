@@ -1,0 +1,260 @@
+body {
+  font-family: "Lucida Grande", Arial, Helvetica, sans-serif;
+}
+
+div.olControlZoom {
+  bottom: 8px;
+  top : auto;
+}
+
+.olControlAttribution {
+  font-size : 10px;
+  bottom    : 5px;
+  right     : 5px;
+}
+
+.nav-bar .x-button {
+  display: -webkit-box;
+  display: box;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+}
+.nav-bar .x-button img {
+  position:relative;
+  top:-3px;
+}
+.nav-bar .x-button span {
+  padding-top:3px;
+  font-size: 9px !important;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: #000 0 -1px 1px;
+}
+
+.x-tab .x-button-icon.layers,
+.x-button .x-button-icon.x-icon-mask.layers {
+  -webkit-mask-image: url(img/layers.png);
+}
+.layers {
+  background:url(img/layers32.png);
+}
+
+.x-tab .x-button-icon.globe,
+.x-button .x-button-icon.x-icon-mask.globe {
+  -webkit-mask-image: url(img/globe.png);
+}
+
+.x-tab .x-button-icon.timeRepeat,
+.x-button .x-button-icon.x-icon-mask.timeRepeat {
+  -webkit-mask-image: url(img/timeRepeat.png);
+}
+
+.x-tab .x-button-icon.bolt,
+.x-button .x-button-icon.x-icon-mask.bolt {
+  -webkit-mask-image: url(img/bolt.png);
+}
+
+.x-tab .x-button-icon.oil,
+.x-button .x-button-icon.x-icon-mask.oil {
+  -webkit-mask-image: url(img/oil.png);
+}
+
+.x-tab .x-button-icon.play,
+.x-button .x-button-icon.x-icon-mask.play {
+  -webkit-mask-image: url(img/play.png);
+}
+.play {
+  background:url(img/control_play_blue.png);
+}
+
+.x-tab .x-button-icon.pause,
+.x-button .x-button-icon.x-icon-mask.pause {
+  -webkit-mask-image: url(img/pause.png);
+}
+.pause {
+  background:url(img/control_pause_blue.png);
+}
+
+.x-tab .x-button-icon.rewind,
+.x-button .x-button-icon.x-icon-mask.rewind {
+  -webkit-mask-image: url(img/rewind.png);
+}
+.rewind {
+  background-image:url(img/control_rewind_blue.png);
+}
+
+.arrow_left {
+  background-image:url(img/control_start_blue.png);
+}
+
+.arrow_right {
+  background-image:url(img/control_end_blue.png);
+}
+
+.x-tab .x-button-icon.fforward,
+.x-button .x-button-icon.x-icon-mask.fforward {
+  -webkit-mask-image: url(img/fforward.png);
+}
+.fforward {
+  background-image:url(img/control_fastforward_blue.png);
+}
+
+#map {
+  z-index : 0;
+}
+
+.olImageLoadError {
+  display: none;
+}
+
+#activity {
+  z-Index : 1003;
+  position : absolute;
+  left : 8px;
+  top  : 32px;
+  background : rgba(255, 255, 255, 0.4);
+  border-radius : 4px;
+  padding : 2px;
+}
+#activity img {
+  display: block;
+  height: 32px;
+  width: 32px;
+  margin: 1px;
+  padding: 0;
+}
+
+#mapLayers {
+  z-Index : 1003;
+  position : absolute;
+  right : 70px;
+  top  : 32px;
+  background : rgba(255, 255, 255, 1);
+  border : 1px solid rgb(30,102,150);
+  border-radius : 4px;
+  padding : 2px;
+}
+#mapLayers img {
+  display: block;
+  height: 32px;
+  width: 44px;
+  margin: 1px;
+  padding: 0;
+}
+
+#legend {
+  z-Index : 1003;
+  position : absolute;
+  right : 8px;
+  top: 32px;
+  background : rgba(255, 255, 255, 1);
+  border : 1px solid rgb(30,102,150);
+  border-radius : 4px;
+  padding : 2px;
+  visibility : visible;
+}
+#legend img {
+  display: block;
+  margin: 1px;
+  padding: 0;
+}
+#legend .legendControl {
+  width : 44px;
+  height : 32px;
+}
+
+#mapTimeDiv {
+  z-Index : 1003;
+  position : absolute;
+  background : rgba(255, 255, 255, 0.6);
+  left : 0;
+  height : 10;
+  width : 100%;
+  border-bottom : 1px solid rgb(30,102,150);
+}
+#mapTimeDiv table {
+  width : 100%;
+}
+
+.buttonLabel {
+  font-size : 10px;
+}
+
+#copyright {
+  z-Index : 1003;
+  position : absolute;
+  right : 8px;
+  bottom: 8px;
+  background : rgba(255, 255, 255, 0.2);
+  border-radius : 4px;
+  padding : 2px;
+  visibility : visible;
+  font-size : 10px;
+}
+
+#copyright a:link {
+  text-decoration : none;
+  color           : #0000ff;
+}
+
+.olControlAttribution {
+  bottom : 25px;
+  right  : 8px;
+}
+
+.mapHeader {
+  font-size : 14px;
+}
+
+.x-tab .x-button-icon.calendar,.x-button .x-button-icon.x-icon-mask.calendar{-webkit-mask-image:url(img/calendar.png)}
+
+.olPopupCloseBox {
+    background: url("img/close.gif") no-repeat scroll 0 0 transparent;
+    cursor: pointer;
+}
+.olFramedCloudPopupContent {
+    overflow: auto;
+    padding: 0 3px 0 3px;
+    text-align : center;
+    font-size : 12px;
+}
+
+.chartItem {
+  padding : 10;
+}
+
+.dir {
+  z-index : 1001;
+}
+
+.forecastLegend {
+  text-align : center;
+  font-size : 12px;
+  line-height : 20px;
+}
+
+.sectionHeader {
+  font-size : 120%;
+  font-weight : bold;
+}
+
+.x-toolbar .x-field {
+  margin : 0;
+}
+.slider .x-input-slider::after {
+    height: 0.4em;
+}
+.slider .x-thumb::before {
+    width: 1.2em;
+    height: 1.2em;
+    top: 0.6em;
+}
+
+.olHandlerBoxZoomBox {
+    border: 2px solid red;
+    position: absolute;
+    background-color: white;
+    opacity: 0.50;
+    font-size: 1px;
+    filter: alpha(opacity=50);
+}

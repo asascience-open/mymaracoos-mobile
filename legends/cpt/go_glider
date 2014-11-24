@@ -1,0 +1,4 @@
+convert -size 204x34 xc: -stroke black -fill '#ffff00' -strokewidth 1 -draw 'circle 20,16 20,29' ../Gliders.png
+mogrify -fill '#1d0a04' -pointsize 17 -draw 'text 37,22 "Active"' ../Gliders.png
+mogrify -stroke black -fill '#a52a2a' -strokewidth 1 -draw 'circle 110,16 110,29' ../Gliders.png
+mogrify -fill '#1d0a04' -pointsize 17 -draw 'text 127,22 "Inactive"' ../Gliders.png

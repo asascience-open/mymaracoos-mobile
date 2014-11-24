@@ -1,0 +1,7 @@
+./makecpt.pl colormaps3.png 2.5 38 WindSpeed 5
+./makecpt.pl colormaps3.png 41 68 BottomWaterTemp 5
+./makecpt.pl colormaps3.png 0 26 WaveHeight 5
+./makecpt.pl colormaps3.png 0 2.02 CurrentSpeed 0.5
+./makecpt.pl colormaps3.png 0 67.5 RADAR 5
+./makecpt.pl colormaps3.png 0 120000 AirPressure 25000
+./makecpt.pl colormaps3.png 30 103 SurfaceWaterTemp 10
