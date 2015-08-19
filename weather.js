@@ -100,7 +100,7 @@ var weather = [
       ,singleTile       : true
       ,wrapDateLine     : true
       ,visibility       : false
-      ,initVisibility   : false
+      ,initVisibility   : true
       ,opacity          : 0.5
       ,noMagic          : true
       ,transitionEffect : 'resize'
