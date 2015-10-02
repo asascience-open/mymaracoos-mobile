@@ -15,6 +15,77 @@
 ?>
 var overlays = [
   new OpenLayers.Layer.WMS(
+     'Water Level (NECOFS GOM)'
+    ,'http://54.174.178.91/wms/NECOFS_GOM3_FORECAST'
+    ,{
+       layers      : 'sea_surface_height_above_geoid'
+      ,transparent : true
+      ,styles      : 'contourf_average_jet_-2.0_4.0_grid_False'
+      ,format      : 'image/png'
+    }
+    ,{
+       isBaseLayer      : false
+      ,projection       : proj3857
+      ,singleTile       : true
+      ,wrapDateLine     : true
+      ,visibility       : false
+      ,initVisibility   : <?php echo json_encode(isset($_REQUEST['Water Level (NECOFS GOM)']) && $_REQUEST['Water Level (NECOFS GOM)'] == 'on')?>
+      ,opacity          : 1
+      ,noMagic          : true
+      ,transitionEffect : 'resize'
+      ,timeSensitive    : true
+      ,legend           : {
+         title : 'Water level (ft)'
+        ,image : 'legends/WaterLevel.png'
+      }
+      ,getFeatureInfo   : {
+         extraParams : [
+           'LAYERS'
+          ,'FORMAT'
+          ,'TRANSPARENT'
+          ,'STYLES'
+        ]
+        ,columns     : {
+          'sea_surface_height_above_geoid' : {
+             name   : 'Water level'
+            ,format : function(json) {
+              if (isNumber(json['sea_surface_height_above_geoid'].val[0])) {
+                return Math.round((json['sea_surface_height_above_geoid'].val[0] * 3.28084) * 10) / 10 + '  ft';
+              }
+              else {
+                return 'forecast unavailable';
+              }
+            }
+          }
+        }
+      }
+      ,charts           : {
+        'sea_surface_height_above_geoid' : {
+           name   : 'Water level (ft)'
+          ,format : function(json,i) {
+            if (isNumber(json['sea_surface_height_above_geoid'].val[i])) {
+              return [
+                 new Date(json['sea_surface_height_above_geoid'].t[i] * 1000)
+                ,Number(json['sea_surface_height_above_geoid'].val[i] * 3.28084)
+                ,null
+              ];
+            }
+            else {
+              return [
+                 null
+                ,null
+                ,null
+              ];
+            }
+          }
+          ,nowVal : function(json,i) {
+            return Number(json['sea_surface_height_above_geoid'].val[i] * 3.28084);
+          }
+        }
+      }
+    }
+  )
+  ,new OpenLayers.Layer.WMS(
      'Waves'
     ,'http://coastmap.com/ecop/wms.aspx'
     ,{
@@ -629,6 +700,7 @@ var forecastOrder = [];
   $l = array(
      'Winds'
     ,'Waves'
+    ,'Water Level (NECOFS GOM)'
     ,'Currents'
     ,'Currents (regional)'
     ,'Currents (NY Harbor)'

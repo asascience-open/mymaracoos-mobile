@@ -1123,7 +1123,7 @@ function buildGetFeatureInfoRequest(xy,nowOnly) {
         ,REQUEST      : 'GetFeatureInfo'
         ,SRS          : origParams['SRS']
         ,EXCEPTIONS   : 'application/vnd.ogc.se_xml'
-        ,INFO_FORMAT  : (/Bottom water temp/.test(lyr.name) ? 'text/csv' : 'text/xml')
+        ,INFO_FORMAT  : (/Bottom water temp|NECOFS/.test(lyr.name) ? 'text/csv' : 'text/xml')
         ,BBOX         : map.getExtent().toBBOX()
         ,X            : Math.round(xy.x)
         ,Y            : Math.round(xy.y)

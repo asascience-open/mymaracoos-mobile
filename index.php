@@ -115,6 +115,7 @@
       .implode('&',array(
          'Winds=on'
         ,'Waves=on'
+        ,'Water Level (NECOFS GOM)=off'
         ,'Currents=off'
         ,'Currents (regional)=off'
         ,'Currents (NY Harbor)=off'
