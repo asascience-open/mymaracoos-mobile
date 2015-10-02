@@ -2,7 +2,7 @@
   date_default_timezone_set('UTC');
   include 'Mobile_Detect.php';
   $detect = new Mobile_Detect();
-  $isMobile = $detect->isMobile();
+  $isMobile = $detect->isMobile() || isset($_REQUEST['mobile']);
   $version   = 1.27;
   $olVersion = 0.0;
 

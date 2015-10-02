@@ -262,6 +262,7 @@ function mapComponent() {
       <?php echo $isMobile ? 'painted' : 'afterrender'?>  : function(c) {
 <?php
   if ($isMobile) {
+/*
 ?>
         if (typeof(scenarioId) != 'string') {
           Ext.Msg.show({
@@ -271,6 +272,7 @@ function mapComponent() {
           });
         }
 <?php
+*/
   }
   else {
 ?>

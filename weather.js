@@ -1,9 +1,9 @@
 var weather = [
   new OpenLayers.Layer.WMS(
      'Radar'
-    ,'http://coastmap.com/ecop/wms.aspx'
+    ,'https://nowcoast.noaa.gov/arcgis/services/nowcoast/radar_meteo_imagery_nexrad_time/MapServer/WMSServer'
     ,{
-       layers      : 'NEXRAD_RADAR'
+       layers      : '1'
       ,transparent : true
       ,styles      : ''
       ,format      : 'image/png'
@@ -85,14 +85,36 @@ var weather = [
     }
   )
 */
+/*
   ,new OpenLayers.Layer.WMS(
      'NHC storm tracks'
-    ,'http://nowcoast.noaa.gov/wms/com.esri.wms.Esrimap/wwa?BGCOLOR=0xCCCCFE&'
+    ,'https://nowcoast.noaa.gov/arcgis/services/nowcoast/wwa_meteocean_tropicalcyclones_trackintensityfcsts_time/MapServer/WMSServer'
     ,{
-       layers      : 'NHC_TRACK_POLY,NHC_TRACK_LIN,NHC_TRACK_PT,NHC_TRACK_PT_72DATE,NHC_TRACK_PT_120DATE,NHC_TRACK_PT_0NAMEDATE,NHC_TRACK_PT_MSLPLABELS,NHC_TRACK_PT_72WLBL,NHC_TRACK_PT_120WLBL,NHC_TRACK_PT_72CAT,NHC_TRACK_PT_120CAT'
+       layers      : '0,1,2,3,4,5,6,7,8,9'
       ,transparent : true
       ,styles      : ''
       ,format      : 'image/png'
+    }
+    ,{
+       isBaseLayer      : false
+      ,projection       : proj3857
+      ,singleTile       : true
+      ,wrapDateLine     : true
+      ,visibility       : false
+      ,initVisibility   : true
+      ,opacity          : 0.5
+      ,noMagic          : true
+      ,transitionEffect : 'resize'
+      ,getFeatureInfo   : false
+    }
+  )
+*/
+  ,new OpenLayers.Layer.ArcGIS93Rest(
+     'NHC storm tracks'
+    ,'http://tmservices1.esri.com/arcgis/rest/services/LiveFeeds/Hurricane_Active/MapServer/export'
+    ,{
+       layers      : 'show:0,1,2,3,4'
+      ,transparent : true
     }
     ,{
        isBaseLayer      : false
