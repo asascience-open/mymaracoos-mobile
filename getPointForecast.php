@@ -5,7 +5,6 @@
 
   $data = array();
   foreach (json_decode(file_get_contents('php://input'),true) as $name => $url) {
-    file_put_contents('/tmp/maplog',$url."\n",FILE_APPEND);
     $dataString = file_get_contents($url);
     $xml = @simplexml_load_string($dataString);
     if ($xml && $xml->{'Point'}) {
