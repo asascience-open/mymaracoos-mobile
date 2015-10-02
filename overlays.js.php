@@ -20,7 +20,7 @@ var overlays = [
     ,{
        layers      : 'sea_surface_height_above_geoid'
       ,transparent : true
-      ,styles      : 'contourf_average_jet_-2.0_2.0_grid_False'
+      ,styles      : 'contourf_average_seismic_-2.0_2.0_grid_False'
       ,format      : 'image/png'
     }
     ,{
