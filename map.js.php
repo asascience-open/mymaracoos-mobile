@@ -1174,6 +1174,8 @@ function popup(ll,html,action) {
   if (el) {
     OpenLayers.Event.observe(el,'touchend',OpenLayers.Function.bindAsEventListener(function(e) {
       OpenLayers.Event.stop(e);
+      // I'm not sure what's changed but iOS seems to need this to be called explicitly.
+      e.target.href && eval(e.target.href);
     }));
   }
   for (var i = 0; i < map.popup.blocks.length; i++) {
