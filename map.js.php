@@ -441,7 +441,7 @@ function mapComponent() {
 
         var cDiv = document.createElement('div');
         cDiv.id = 'copyright';
-        cDiv.innerHTML = 'Powered by <a href="http://asascience.com">ASA Coastmap</a>';
+        cDiv.innerHTML = 'Powered by <a href="http://oceansmap.com">OceansMap</a>';
         document.getElementById('map').appendChild(cDiv);
 
         var startupLayers = [];
