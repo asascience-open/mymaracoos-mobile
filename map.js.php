@@ -5,7 +5,10 @@
 var map;
 var glidersCtl;
 var loadingOverlays = {};
-var initExtent = new OpenLayers.Bounds(-77,35,-69,42).transform(proj4326,proj3857);
+// MARACOOS domain
+// var initExtent = new OpenLayers.Bounds(-77,35,-69,42).transform(proj4326,proj3857);
+// E-USA
+var initExtent = new OpenLayers.Bounds(-125.5,13,-20.5,57.5).transform(proj4326,proj3857);
 
 var animateTimeout = 1500;
 var animating      = false;
