@@ -111,7 +111,7 @@ var weather = [
 */
   ,new OpenLayers.Layer.ArcGIS93Rest(
      'NHC storm tracks'
-    ,'http://tmservices1.esri.com/arcgis/rest/services/LiveFeeds/Hurricane_Active/MapServer/export'
+    ,'http://utility.arcgis.com/usrsvcs/servers/4422573bd4324cfa86b2a3774063f6cc/rest/services/LiveFeeds/Hurricane_Active/MapServer/export'
     ,{
        layers      : 'show:0,1,2,3,4'
       ,transparent : true
