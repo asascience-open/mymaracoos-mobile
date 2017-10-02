@@ -5,7 +5,7 @@
 
   $features = array();
 
-  $json = json_decode(file_get_contents('http://marine.rutgers.edu/cool/auvs/track.php?service=track&region=mab&t0='.date("Y-m-d H:i",time() - 365 / 2 * 24 * 3600)),true);
+  $json = json_decode(file_get_contents('http://marine.rutgers.edu/cool/auvs/track.php?service=track&region=mab&t0='.urlencode(date("Y-m-d H:i",time() - 365 / 2 * 24 * 3600))),true);
   foreach ($json as $id => $glider) {
     $points = array();
     $times  = array();
